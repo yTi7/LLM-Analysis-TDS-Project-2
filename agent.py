@@ -112,7 +112,7 @@ def agent_node(state: AgentState):
         prev_time = float(prev_time)
         diff = cur_time - prev_time
 
-        if diff >= 180 or (offset != "0" and (cur_time - float(offset)) > 90):
+        if diff >= 180 or (offset != "0" and (cur_time - float(offset)) > 300):
             print(f"Timeout exceeded ({diff}s) — instructing LLM to purposely submit wrong answer.")
 
             fail_instruction = """
